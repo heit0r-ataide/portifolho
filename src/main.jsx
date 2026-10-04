@@ -284,7 +284,7 @@ function App() {
 
         <section className="contact section-grid" id="contato">
           <div className="section-number">06 <span>/ {content.contact.section}</span></div>
-          <div className="contact-content"><p className="eyebrow">{content.contact.eyebrow}</p><h2>{content.contact.title}<br /><em>{content.contact.highlight}</em></h2><a className="contact-link" href="mailto:heitor.gaddo@gmail.com">heitor.gaddo@gmail.com <ArrowUpRight /></a></div>
+          <div className="contact-content"><p className="eyebrow">{content.contact.eyebrow}</p><h2>{content.contact.title}<br /><em>{content.contact.highlight}</em></h2><a className="contact-link" href="mailto:heitorgataide@gmail.com">heitorgataide@gmail.com <ArrowUpRight /></a></div>
         </section>
       </main>
 
