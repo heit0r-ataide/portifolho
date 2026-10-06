@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import portraitImage from '../Captura de tela 2026-10-04 171644.png';
+import resumeUrl from '../curriculo_cia_estagios (2)_260930_140727.pdf?url';
 import './styles.css';
 
 const languages = [
@@ -41,6 +42,7 @@ const translations = {
     },
     skills: { section: 'repertório', eyebrow: 'Ferramentas do dia a dia', title: 'Construindo uma base', highlight: 'para ir além.', values: ['Java', 'Node.js', 'React', 'Python', 'PHP', 'MySQL', 'APIs REST', 'Git & GitHub'] },
     social: { section: 'redes', eyebrow: 'Conhecer-me mais', title: 'Me encontre', highlight: 'por aí.', githubLabel: 'Acessar GitHub de Heitor', linkedinLabel: 'Acessar LinkedIn de Heitor' },
+    resume: { section: 'currículo', eyebrow: 'Minha trajetória profissional', title: 'Currículo', viewLabel: 'Visualizar currículo', downloadLabel: 'Baixar currículo' },
     contact: { section: 'contato', eyebrow: 'Tem uma ideia?', title: 'Vamos fazer algo', highlight: 'interessante juntos.' },
     footerMade: 'feito com curiosidade', backToTop: 'voltar ao topo',
   },
@@ -71,6 +73,7 @@ const translations = {
     },
     skills: { section: 'toolkit', eyebrow: 'Tools I use every day', title: 'Building a foundation', highlight: 'to go further.', values: ['Java', 'Node.js', 'React', 'Python', 'PHP', 'MySQL', 'REST APIs', 'Git & GitHub'] },
     social: { section: 'social', eyebrow: 'Get to know me', title: 'Find me', highlight: 'online.', githubLabel: "Visit Heitor's GitHub", linkedinLabel: "Visit Heitor's LinkedIn" },
+    resume: { section: 'resume', eyebrow: 'My professional journey', title: 'Resume', viewLabel: 'View resume', downloadLabel: 'Download resume' },
     contact: { section: 'contact', eyebrow: 'Have an idea?', title: "Let's build something", highlight: 'interesting together.' },
     footerMade: 'made with curiosity', backToTop: 'back to top',
   },
@@ -101,6 +104,7 @@ const translations = {
     },
     skills: { section: 'herramientas', eyebrow: 'Herramientas del día a día', title: 'Construyendo una base', highlight: 'para ir más allá.', values: ['Java', 'Node.js', 'React', 'Python', 'PHP', 'MySQL', 'APIs REST', 'Git & GitHub'] },
     social: { section: 'redes', eyebrow: 'Conóceme mejor', title: 'Encuéntrame', highlight: 'por ahí.', githubLabel: 'Visitar GitHub de Heitor', linkedinLabel: 'Visitar LinkedIn de Heitor' },
+    resume: { section: 'currículum', eyebrow: 'Mi trayectoria profesional', title: 'Currículum', viewLabel: 'Ver currículum', downloadLabel: 'Descargar currículum' },
     contact: { section: 'contacto', eyebrow: '¿Tienes una idea?', title: 'Hagamos algo', highlight: 'interesante juntos.' },
     footerMade: 'hecho con curiosidad', backToTop: 'volver arriba',
   },
@@ -131,6 +135,7 @@ const translations = {
     },
     skills: { section: 'compétences', eyebrow: 'Mes outils au quotidien', title: 'Construire des bases', highlight: 'pour aller plus loin.', values: ['Java', 'Node.js', 'React', 'Python', 'PHP', 'MySQL', 'API REST', 'Git & GitHub'] },
     social: { section: 'réseaux', eyebrow: 'Pour mieux me connaître', title: 'Retrouvez-moi', highlight: 'en ligne.', githubLabel: 'Voir le GitHub de Heitor', linkedinLabel: 'Voir le LinkedIn de Heitor' },
+    resume: { section: 'CV', eyebrow: 'Mon parcours professionnel', title: 'CV', viewLabel: 'Voir le CV', downloadLabel: 'Télécharger le CV' },
     contact: { section: 'contact', eyebrow: 'Une idée en tête ?', title: 'Créons quelque chose', highlight: "d'intéressant ensemble." },
     footerMade: 'créé avec curiosité', backToTop: 'retour en haut',
   },
@@ -161,6 +166,7 @@ const translations = {
     },
     skills: { section: 'kenntnisse', eyebrow: 'Werkzeuge im Alltag', title: 'Ein solides Fundament', highlight: 'für den nächsten Schritt.', values: ['Java', 'Node.js', 'React', 'Python', 'PHP', 'MySQL', 'REST-APIs', 'Git & GitHub'] },
     social: { section: 'profile', eyebrow: 'Lerne mich besser kennen', title: 'Hier findest du mich', highlight: 'online.', githubLabel: 'Heitors GitHub öffnen', linkedinLabel: 'Heitors LinkedIn öffnen' },
+    resume: { section: 'Lebenslauf', eyebrow: 'Mein beruflicher Werdegang', title: 'Lebenslauf', viewLabel: 'Lebenslauf ansehen', downloadLabel: 'Lebenslauf herunterladen' },
     contact: { section: 'kontakt', eyebrow: 'Eine Idee?', title: 'Lass uns etwas', highlight: 'Spannendes zusammen entwickeln.' },
     footerMade: 'mit Neugier gestaltet', backToTop: 'nach oben',
   },
@@ -282,8 +288,24 @@ function App() {
           </div>
         </section>
 
+        <section className="resume section-grid" id="curriculo">
+          <div className="section-number">06 <span>/ {content.resume.section}</span></div>
+          <div className="resume-content">
+            <p className="eyebrow">{content.resume.eyebrow}</p>
+            <h2>{content.resume.title}</h2>
+            <div className="resume-actions">
+              <a className="button button-primary resume-button" href={resumeUrl} target="_blank" rel="noopener noreferrer">
+                {content.resume.viewLabel} <ArrowUpRight />
+              </a>
+              <a className="button button-outline resume-button" href={resumeUrl} download="curriculo-heitor-gaddo-ataide.pdf">
+                {content.resume.downloadLabel} <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="contact section-grid" id="contato">
-          <div className="section-number">06 <span>/ {content.contact.section}</span></div>
+          <div className="section-number">07 <span>/ {content.contact.section}</span></div>
           <div className="contact-content"><p className="eyebrow">{content.contact.eyebrow}</p><h2>{content.contact.title}<br /><em>{content.contact.highlight}</em></h2><a className="contact-link" href="mailto:heitorgataide@gmail.com">heitorgataide@gmail.com <ArrowUpRight /></a></div>
         </section>
       </main>
