@@ -36,7 +36,7 @@ const translations = {
     experience: {
       section: 'experiência', eyebrow: 'Onde estive aprendendo', title: 'Experiência que', highlight: 'me trouxe até aqui.',
       entries: [
-        { period: 'Experiência atual', title: 'Estagiário de Desenvolvimento de Software', company: 'Elevate Software House', description: 'Construindo repertório em desenvolvimento de software, colaboração em equipe e entrega de soluções digitais com impacto real.', tag: 'Software' },
+        { period: 'Experiência atual', title: 'Desenvolvedor de Software', company: 'Elevate Software House', description: 'Construindo repertório em desenvolvimento de software, colaboração em equipe e entrega de soluções digitais com impacto real.', tag: 'Software' },
         { period: 'Experiência atual', title: 'Professor de Inglês', company: 'KNN', description: 'Desenvolvimento de comunicação, didática e liderança ao transformar conhecimento em experiências de aprendizagem claras e humanas.', tag: 'Educação' },
       ],
     },
@@ -67,7 +67,7 @@ const translations = {
     experience: {
       section: 'experience', eyebrow: 'Where I have been learning', title: 'Experience that', highlight: 'brought me here.',
       entries: [
-        { period: 'Current role', title: 'Software Development Intern', company: 'Elevate Software House', description: 'Building software development skills, collaborating with a team, and delivering digital solutions with real impact.', tag: 'Software' },
+        { period: 'Current role', title: 'Software Developer', company: 'Elevate Software House', description: 'Building software development skills, collaborating with a team, and delivering digital solutions with real impact.', tag: 'Software' },
         { period: 'Current role', title: 'English Teacher', company: 'KNN', description: 'Building communication, teaching, and leadership skills by turning knowledge into clear, engaging learning experiences.', tag: 'Education' },
       ],
     },
@@ -98,7 +98,7 @@ const translations = {
     experience: {
       section: 'experiencia', eyebrow: 'Dónde he aprendido', title: 'Experiencias que', highlight: 'me trajeron hasta aquí.',
       entries: [
-        { period: 'Trabajo actual', title: 'Pasante de desarrollo de software', company: 'Elevate Software House', description: 'Ampliando mis conocimientos en desarrollo de software, colaborando en equipo y creando soluciones digitales con impacto real.', tag: 'Software' },
+        { period: 'Trabajo actual', title: 'Desarrollador de software', company: 'Elevate Software House', description: 'Ampliando mis conocimientos en desarrollo de software, colaborando en equipo y creando soluciones digitales con impacto real.', tag: 'Software' },
         { period: 'Trabajo actual', title: 'Profesor de inglés', company: 'KNN', description: 'Desarrollando comunicación, didáctica y liderazgo al transformar conocimientos en experiencias de aprendizaje claras y cercanas.', tag: 'Educación' },
       ],
     },
@@ -129,7 +129,7 @@ const translations = {
     experience: {
       section: 'expérience', eyebrow: "Là où j'ai appris", title: 'Des expériences qui', highlight: "m'ont mené jusqu'ici.",
       entries: [
-        { period: 'Poste actuel', title: 'Stagiaire en développement logiciel', company: 'Elevate Software House', description: 'Développer mes compétences, collaborer en équipe et créer des solutions numériques à impact réel.', tag: 'Logiciel' },
+        { period: 'Poste actuel', title: 'Développeur logiciel', company: 'Elevate Software House', description: 'Développer mes compétences, collaborer en équipe et créer des solutions numériques à impact réel.', tag: 'Logiciel' },
         { period: 'Poste actuel', title: "Professeur d'anglais", company: 'KNN', description: "Développer la communication, la pédagogie et le leadership en transformant le savoir en expériences d’apprentissage claires et humaines.", tag: 'Éducation' },
       ],
     },
@@ -160,7 +160,7 @@ const translations = {
     experience: {
       section: 'erfahrung', eyebrow: 'Wo ich gelernt habe', title: 'Erfahrungen, die', highlight: 'mich hierher gebracht haben.',
       entries: [
-        { period: 'Aktuelle Tätigkeit', title: 'Praktikant für Softwareentwicklung', company: 'Elevate Software House', description: 'Softwareentwicklung lernen, im Team zusammenarbeiten und digitale Lösungen mit echter Wirkung umsetzen.', tag: 'Software' },
+        { period: 'Aktuelle Tätigkeit', title: 'Softwareentwickler', company: 'Elevate Software House', description: 'Softwareentwicklung lernen, im Team zusammenarbeiten und digitale Lösungen mit echter Wirkung umsetzen.', tag: 'Software' },
         { period: 'Aktuelle Tätigkeit', title: 'Englischlehrer', company: 'KNN', description: 'Kommunikation, Didaktik und Führung stärken und Wissen in klare, menschliche Lernerfahrungen verwandeln.', tag: 'Bildung' },
       ],
     },
@@ -172,8 +172,143 @@ const translations = {
   },
 };
 
+const experiencePaths = ['/experiencia/desenvolvedor-software', '/experiencia/professor-ingles'];
+
+const skillGroups = {
+  'pt-BR': [
+    { title: 'Backend', values: ['Java', 'Node.js', 'Python', 'PHP', 'APIs REST', 'Git & GitHub'] },
+    { title: 'Frontend', values: ['React'] },
+    { title: 'Banco de Dados', values: ['MySQL', 'PostgreSQL'] },
+  ],
+  en: [
+    { title: 'Backend', values: ['Java', 'Node.js', 'Python', 'PHP', 'REST APIs', 'Git & GitHub'] },
+    { title: 'Frontend', values: ['React'] },
+    { title: 'Databases', values: ['MySQL', 'PostgreSQL'] },
+  ],
+  es: [
+    { title: 'Backend', values: ['Java', 'Node.js', 'Python', 'PHP', 'APIs REST', 'Git & GitHub'] },
+    { title: 'Frontend', values: ['React'] },
+    { title: 'Bases de datos', values: ['MySQL', 'PostgreSQL'] },
+  ],
+  fr: [
+    { title: 'Backend', values: ['Java', 'Node.js', 'Python', 'PHP', 'API REST', 'Git & GitHub'] },
+    { title: 'Frontend', values: ['React'] },
+    { title: 'Bases de données', values: ['MySQL', 'PostgreSQL'] },
+  ],
+  de: [
+    { title: 'Backend', values: ['Java', 'Node.js', 'Python', 'PHP', 'REST-APIs', 'Git & GitHub'] },
+    { title: 'Frontend', values: ['React'] },
+    { title: 'Datenbanken', values: ['MySQL', 'PostgreSQL'] },
+  ],
+};
+
+const experiencePages = {
+  [experiencePaths[0]]: {
+    title: 'Desenvolvedor de Software',
+    company: 'Elevate Software House',
+    period: 'Experiência atual',
+    logo: 'https://elevatebr.org/images/elevate-logo.png',
+    logoAlt: 'Logo da Elevate Software House',
+    website: 'https://elevatebr.org/',
+    introduction: 'Na Elevate Software House, participo do desenvolvimento e da evolução de produtos digitais. A experiência envolve transformar necessidades em funcionalidades, colaborar com o time ao longo do ciclo de desenvolvimento e cuidar da qualidade das entregas.',
+    details: 'Também tenho contato com diferentes etapas da construção de software, desde o entendimento do problema e a implementação até testes, ajustes e integração entre partes da aplicação. Esse trabalho tem ampliado minha visão de produto, minha capacidade de colaborar e meu cuidado com soluções claras e sustentáveis.',
+    projects: [
+      { name: 'SupportHub', category: 'Plataforma de suporte', mark: 'SH', description: 'Participação no desenvolvimento da aplicação, contribuindo para a implementação e evolução de funcionalidades e para a experiência de uso da plataforma.' },
+      { name: 'SeatHub', category: 'Gestão de espaços', mark: 'SEAT', image: 'https://seathub.net/seathub%20(2).png', description: 'Atuação no desenvolvimento de uma plataforma SaaS que conecta espaços e clientes, com recursos de busca, reserva e gestão.' },
+      { name: 'Legal Elevate', category: 'Tecnologia jurídica', mark: 'LE', description: 'Colaboração no desenvolvimento de uma solução digital voltada a operações jurídicas, com foco na evolução da aplicação e de seus fluxos.' },
+    ],
+  },
+  [experiencePaths[1]]: {
+    title: 'Professor de Inglês',
+    company: 'KNN',
+    period: 'Experiência atual',
+    logo: 'https://www.knnfranchising.com.br/images/knn-footer-logo.png',
+    logoAlt: 'Logo da KNN Idiomas',
+    website: 'https://www.knnidiomas.com.br/',
+    introduction: 'Como professor de inglês na KNN, conduzo experiências de aprendizagem que aproximam o idioma da comunicação do dia a dia. A função pede atenção ao ritmo e às necessidades de cada aluno, além de clareza para explicar e incentivar a participação.',
+    details: 'A preparação e a condução das aulas fortalecem minha comunicação, organização e capacidade de adaptar a abordagem a diferentes pessoas. Também aprendo a acompanhar o progresso dos alunos e a criar um ambiente acolhedor, participativo e orientado à prática.',
+    projects: [],
+  },
+};
+
 function ArrowUpRight() {
   return <span aria-hidden="true" className="arrow">↗</span>;
+}
+
+function ExperienceDetail({ experience, content, language, isDark, onLanguageChange, onThemeToggle }) {
+  return (
+    <div className="site-shell">
+      <header className="topbar">
+        <a className="brand" href="/#inicio" aria-label={content.homeLabel}>Heitor Gaddo Ataíde</a>
+        <nav className="nav-links" aria-label={content.navigationLabel}>
+          <a href="/#sobre">{content.aboutNav}</a>
+          <a href="/#experiencia">{content.experienceNav}</a>
+          <a href="/#contato">{content.contactNav}</a>
+        </nav>
+        <div className="header-controls">
+          <label className="language-control">
+            <span className="visually-hidden">{content.languageLabel}</span>
+            <select aria-label={content.languageLabel} value={language} onChange={(event) => onLanguageChange(event.target.value)}>
+              {languages.map((option) => <option key={option.code} value={option.code}>{option.label}</option>)}
+            </select>
+          </label>
+          <button className="theme-toggle" type="button" onClick={onThemeToggle} aria-label={isDark ? content.themeLightLabel : content.themeDarkLabel}>
+            <span className="theme-icon" aria-hidden="true">{isDark ? '☀' : '◐'}</span>
+            <span>{isDark ? content.light : content.dark}</span>
+          </button>
+        </div>
+      </header>
+
+      <main className="detail-main">
+        <a className="text-link detail-back" href="/#experiencia">← {content.experienceNav}</a>
+        <section className="detail-intro">
+          <div>
+            <p className="eyebrow">{experience.period}</p>
+            <h1>{experience.title}</h1>
+            <p className="detail-lead">{experience.introduction}</p>
+            <p className="detail-copy">{experience.details}</p>
+          </div>
+          <aside className="employer-panel">
+            <a className="employer-logo" href={experience.website} target="_blank" rel="noreferrer" aria-label={experience.company}>
+              <img src={experience.logo} alt={experience.logoAlt} />
+            </a>
+            <strong>{experience.company}</strong>
+            <span>{experience.period}</span>
+            <a className="text-link" href={experience.website} target="_blank" rel="noreferrer">Site da empresa <ArrowUpRight /></a>
+          </aside>
+        </section>
+
+        {experience.projects.length > 0 && (
+          <section className="detail-projects">
+            <div className="detail-section-heading">
+              <p className="eyebrow">Projetos</p>
+              <h2>Produtos em que participei.</h2>
+            </div>
+            <div className="project-grid">
+              {experience.projects.map((project, index) => (
+                <article className="project-card" key={project.name}>
+                  <div className={`project-visual project-visual-${index + 1}`} role="img" aria-label={`${project.name}, identidade visual ilustrativa`}>
+                    <span className="project-visual-label">Elevate · Produto digital</span>
+                    {project.image ? <img src={project.image} alt="Logo SeatHub" /> : <span className="project-mark">{project.mark}</span>}
+                    <strong>{project.name}</strong>
+                    <span className="project-visual-caption">{project.category}</span>
+                  </div>
+                  <div className="project-card-copy">
+                    <span className="project-number">0{index + 1} / {project.category}</span>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                    {project.name === 'SeatHub' && <a className="text-link" href="https://seathub.net/" target="_blank" rel="noreferrer">Conhecer SeatHub <ArrowUpRight /></a>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <footer className="footer"><span>© 2026 Heitor Gaddo Ataíde</span><a href="/#inicio">{content.backToTop} ↑</a></footer>
+      </main>
+    </div>
+  );
 }
 
 function App() {
@@ -183,6 +318,7 @@ function App() {
     return Object.hasOwn(translations, savedLanguage) ? savedLanguage : 'pt-BR';
   });
   const content = translations[language];
+  const activeExperience = experiencePages[window.location.pathname];
 
   useEffect(() => {
     document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
@@ -191,10 +327,14 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = content.documentTitle;
+    document.title = activeExperience ? `${activeExperience.title} | Heitor Gaddo Ataíde` : content.documentTitle;
     document.querySelector('meta[name="description"]')?.setAttribute('content', content.documentDescription);
     localStorage.setItem('language', language);
-  }, [content, language]);
+  }, [activeExperience, content, language]);
+
+  if (activeExperience) {
+    return <ExperienceDetail experience={activeExperience} content={content} language={language} isDark={isDark} onLanguageChange={setLanguage} onThemeToggle={() => setIsDark((value) => !value)} />;
+  }
 
   return (
     <div className="site-shell">
@@ -260,14 +400,14 @@ function App() {
           <div className="experience-content">
             <div className="section-heading-row"><div><p className="eyebrow">{content.experience.eyebrow}</p><h2>{content.experience.title}<br /><em>{content.experience.highlight}</em></h2></div><span className="chapter-mark">✳</span></div>
             <div className="experience-list">
-              {content.experience.entries.map((experience, index) => <article className="experience-item" key={experience.company}><span className="experience-index">0{index + 1}</span><div className="experience-main"><div className="experience-meta"><span>{experience.period}</span><span className="experience-tag">{experience.tag}</span></div><h3>{experience.title}</h3><p className="company">{experience.company}</p><p className="experience-description">{experience.description}</p></div><ArrowUpRight /></article>)}
+              {content.experience.entries.map((experience, index) => <a className="experience-item" href={experiencePaths[index]} key={experience.company}><span className="experience-index">0{index + 1}</span><div className="experience-main"><div className="experience-meta"><span>{experience.period}</span><span className="experience-tag">{experience.tag}</span></div><h3>{experience.title}</h3><p className="company">{experience.company}</p><p className="experience-description">{experience.description}</p></div><ArrowUpRight /></a>)}
             </div>
           </div>
         </section>
 
         <section className="skills section-grid">
           <div className="section-number">04 <span>/ {content.skills.section}</span></div>
-          <div className="skills-content"><p className="eyebrow">{content.skills.eyebrow}</p><h2>{content.skills.title}<br /><em>{content.skills.highlight}</em></h2><div className="skill-list">{content.skills.values.map((skill, index) => <span className="skill-pill" key={skill}><b>0{index + 1}</b>{skill}</span>)}</div></div>
+          <div className="skills-content"><p className="eyebrow">{content.skills.eyebrow}</p><h2>{content.skills.title}<br /><em>{content.skills.highlight}</em></h2><div className="skill-groups">{skillGroups[language].map((group) => <div className="skill-group" key={group.title}><h3>{group.title}</h3><div className="skill-list">{group.values.map((skill, index) => <span className="skill-pill" key={skill}><b>0{index + 1}</b>{skill}</span>)}</div></div>)}</div></div>
         </section>
 
         <section className="contact section-grid" id="redes">
