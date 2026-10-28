@@ -204,6 +204,8 @@ const skillGroups = {
 
 const experiencePages = {
   [experiencePaths[0]]: {
+    id: 'developer',
+    entryIndex: 0,
     title: 'Desenvolvedor de Software',
     company: 'Elevate Software House',
     period: 'Experiência atual',
@@ -219,6 +221,8 @@ const experiencePages = {
     ],
   },
   [experiencePaths[1]]: {
+    id: 'teacher',
+    entryIndex: 1,
     title: 'Professor de Inglês',
     company: 'KNN',
     period: 'Experiência atual',
@@ -228,6 +232,104 @@ const experiencePages = {
     introduction: 'Como professor de inglês na KNN, conduzo experiências de aprendizagem que aproximam o idioma da comunicação do dia a dia. A função pede atenção ao ritmo e às necessidades de cada aluno, além de clareza para explicar e incentivar a participação.',
     details: 'A preparação e a condução das aulas fortalecem minha comunicação, organização e capacidade de adaptar a abordagem a diferentes pessoas. Também aprendo a acompanhar o progresso dos alunos e a criar um ambiente acolhedor, participativo e orientado à prática.',
     projects: [],
+  },
+};
+
+const experiencePageTranslations = {
+  'pt-BR': {
+    developer: {
+      period: 'Experiência atual', logoAlt: 'Logo da Elevate Software House',
+      introduction: 'Na Elevate Software House, participo do desenvolvimento e da evolução de produtos digitais. A experiência envolve transformar necessidades em funcionalidades, colaborar com o time ao longo do ciclo de desenvolvimento e cuidar da qualidade das entregas.',
+      details: 'Também tenho contato com diferentes etapas da construção de software, desde o entendimento do problema e a implementação até testes, ajustes e integração entre partes da aplicação. Esse trabalho tem ampliado minha visão de produto, minha capacidade de colaborar e meu cuidado com soluções claras e sustentáveis.',
+      companySiteLabel: 'Site da empresa', projectsEyebrow: 'Projetos', projectsHeading: 'Produtos em que participei.', visualLabel: 'Elevate · Produto digital', projectVisualAlt: 'identidade visual ilustrativa', projectVisitLabel: 'Conhecer SeatHub',
+      projects: [
+        { category: 'Plataforma de suporte', description: 'Participação no desenvolvimento da aplicação, contribuindo para a implementação e evolução de funcionalidades e para a experiência de uso da plataforma.' },
+        { category: 'Gestão de espaços', description: 'Atuação no desenvolvimento de uma plataforma SaaS que conecta espaços e clientes, com recursos de busca, reserva e gestão.' },
+        { category: 'Tecnologia jurídica', description: 'Colaboração no desenvolvimento de uma solução digital voltada a operações jurídicas, com foco na evolução da aplicação e de seus fluxos.' },
+      ],
+    },
+    teacher: {
+      period: 'Experiência atual', logoAlt: 'Logo da KNN Idiomas',
+      introduction: 'Como professor de inglês na KNN, conduzo experiências de aprendizagem que aproximam o idioma da comunicação do dia a dia. A função pede atenção ao ritmo e às necessidades de cada aluno, além de clareza para explicar e incentivar a participação.',
+      details: 'A preparação e a condução das aulas fortalecem minha comunicação, organização e capacidade de adaptar a abordagem a diferentes pessoas. Também aprendo a acompanhar o progresso dos alunos e a criar um ambiente acolhedor, participativo e orientado à prática.',
+      companySiteLabel: 'Site da empresa',
+    },
+  },
+  en: {
+    developer: {
+      period: 'Current role', logoAlt: 'Elevate Software House logo',
+      introduction: 'At Elevate Software House, I contribute to the development and ongoing improvement of digital products. My work involves turning needs into features, collaborating with the team throughout the development cycle, and helping ensure the quality of each delivery.',
+      details: 'I take part in different stages of building software, from understanding a problem and implementing a solution to testing, refining, and integrating application components. This experience is broadening my product perspective, teamwork, and commitment to clear, maintainable solutions.',
+      companySiteLabel: 'Company website', projectsEyebrow: 'Projects', projectsHeading: 'Products I helped build.', visualLabel: 'Elevate · Digital product', projectVisualAlt: 'illustrative visual identity', projectVisitLabel: 'Explore SeatHub',
+      projects: [
+        { category: 'Support platform', description: 'Contributed to developing the application by implementing and improving features, while helping shape the platform experience.' },
+        { category: 'Space management', description: 'Worked on a SaaS platform connecting spaces with customers through discovery, booking, and management features.' },
+        { category: 'Legal technology', description: 'Collaborated on a digital solution for legal operations, contributing to application improvements and user flows.' },
+      ],
+    },
+    teacher: {
+      period: 'Current role', logoAlt: 'KNN Idiomas logo',
+      introduction: 'As an English teacher at KNN, I guide learning experiences that connect the language with everyday communication. The role calls for attention to each student’s pace and needs, as well as clear explanations that encourage participation.',
+      details: 'Preparing and teaching lessons strengthens my communication and organization, and helps me adapt my approach to different people. I also learn to follow students’ progress and create a welcoming, active environment centered on practice.',
+      companySiteLabel: 'Company website',
+    },
+  },
+  es: {
+    developer: {
+      period: 'Puesto actual', logoAlt: 'Logotipo de Elevate Software House',
+      introduction: 'En Elevate Software House participo en el desarrollo y la evolución de productos digitales. Mi trabajo consiste en convertir necesidades en funcionalidades, colaborar con el equipo durante el ciclo de desarrollo y contribuir a la calidad de cada entrega.',
+      details: 'Participo en distintas etapas de la creación de software: comprender el problema, implementar soluciones, probarlas, ajustarlas e integrar componentes de la aplicación. Esta experiencia amplía mi visión de producto, mi colaboración con el equipo y mi atención a soluciones claras y sostenibles.',
+      companySiteLabel: 'Sitio de la empresa', projectsEyebrow: 'Proyectos', projectsHeading: 'Productos en cuyo desarrollo participé.', visualLabel: 'Elevate · Producto digital', projectVisualAlt: 'identidad visual ilustrativa', projectVisitLabel: 'Conocer SeatHub',
+      projects: [
+        { category: 'Plataforma de soporte', description: 'Participé en el desarrollo de la aplicación, contribuyendo a implementar y mejorar funcionalidades y a la experiencia de uso de la plataforma.' },
+        { category: 'Gestión de espacios', description: 'Colaboré en una plataforma SaaS que conecta espacios y clientes mediante funciones de búsqueda, reserva y gestión.' },
+        { category: 'Tecnología jurídica', description: 'Colaboré en una solución digital para operaciones jurídicas, contribuyendo a la evolución de la aplicación y sus flujos.' },
+      ],
+    },
+    teacher: {
+      period: 'Puesto actual', logoAlt: 'Logotipo de KNN Idiomas',
+      introduction: 'Como profesor de inglés en KNN, guío experiencias de aprendizaje que acercan el idioma a la comunicación cotidiana. El puesto requiere atención al ritmo y a las necesidades de cada alumno, además de explicaciones claras que fomenten su participación.',
+      details: 'Preparar y dar clases fortalece mi comunicación y organización, y mi capacidad para adaptar el enfoque a distintas personas. También aprendo a acompañar el progreso de los alumnos y a crear un ambiente acogedor, participativo y centrado en la práctica.',
+      companySiteLabel: 'Sitio de la empresa',
+    },
+  },
+  fr: {
+    developer: {
+      period: 'Poste actuel', logoAlt: 'Logo d’Elevate Software House',
+      introduction: 'Chez Elevate Software House, je participe au développement et à l’évolution de produits numériques. Mon travail consiste à transformer les besoins en fonctionnalités, à collaborer avec l’équipe tout au long du cycle de développement et à contribuer à la qualité des livraisons.',
+      details: 'Je prends part aux différentes étapes de création d’un logiciel : comprendre le problème, mettre en œuvre une solution, la tester, l’ajuster et intégrer les composants de l’application. Cette expérience développe ma vision produit, mon esprit d’équipe et mon attention aux solutions claires et durables.',
+      companySiteLabel: 'Site de l’entreprise', projectsEyebrow: 'Projets', projectsHeading: 'Des produits auxquels j’ai contribué.', visualLabel: 'Elevate · Produit numérique', projectVisualAlt: 'identité visuelle illustrative', projectVisitLabel: 'Découvrir SeatHub',
+      projects: [
+        { category: 'Plateforme de support', description: 'J’ai contribué au développement de l’application, à la mise en œuvre et à l’amélioration de fonctionnalités ainsi qu’à l’expérience de la plateforme.' },
+        { category: 'Gestion des espaces', description: 'J’ai participé à une plateforme SaaS qui relie les espaces à leurs clients grâce à la recherche, la réservation et la gestion.' },
+        { category: 'Technologie juridique', description: 'J’ai collaboré à une solution numérique dédiée aux opérations juridiques, en contribuant à l’évolution de l’application et de ses parcours.' },
+      ],
+    },
+    teacher: {
+      period: 'Poste actuel', logoAlt: 'Logo de KNN Idiomas',
+      introduction: 'Comme professeur d’anglais chez KNN, je guide des expériences d’apprentissage qui rapprochent la langue de la communication quotidienne. Le poste demande de tenir compte du rythme et des besoins de chaque élève, et d’expliquer clairement pour encourager la participation.',
+      details: 'La préparation et l’animation des cours renforcent ma communication, mon organisation et ma capacité à adapter mon approche à différentes personnes. J’apprends aussi à suivre les progrès des élèves et à créer un environnement accueillant, participatif et axé sur la pratique.',
+      companySiteLabel: 'Site de l’entreprise',
+    },
+  },
+  de: {
+    developer: {
+      period: 'Aktuelle Position', logoAlt: 'Logo von Elevate Software House',
+      introduction: 'Bei Elevate Software House wirke ich an der Entwicklung und Weiterentwicklung digitaler Produkte mit. Dazu gehören die Umsetzung von Anforderungen in Funktionen, die Zusammenarbeit im Team während des gesamten Entwicklungszyklus und mein Beitrag zur Qualität der Ergebnisse.',
+      details: 'Ich lerne verschiedene Phasen der Softwareentwicklung kennen: Probleme verstehen, Lösungen implementieren, testen, verbessern und Anwendungskomponenten integrieren. Dadurch erweitere ich meine Produktsicht, meine Teamfähigkeit und meinen Anspruch an klare, nachhaltige Lösungen.',
+      companySiteLabel: 'Unternehmenswebsite', projectsEyebrow: 'Projekte', projectsHeading: 'Produkte, an denen ich mitgewirkt habe.', visualLabel: 'Elevate · Digitales Produkt', projectVisualAlt: 'illustrative visuelle Identität', projectVisitLabel: 'SeatHub ansehen',
+      projects: [
+        { category: 'Supportplattform', description: 'Ich wirkte an der Entwicklung der Anwendung mit, implementierte und verbesserte Funktionen und unterstützte die Weiterentwicklung der Nutzererfahrung.' },
+        { category: 'Raumverwaltung', description: 'Ich arbeitete an einer SaaS-Plattform mit, die Räume und Kunden durch Suche, Buchung und Verwaltung verbindet.' },
+        { category: 'Legal Tech', description: 'Ich arbeitete an einer digitalen Lösung für juristische Abläufe mit und trug zur Weiterentwicklung der Anwendung und ihrer Prozesse bei.' },
+      ],
+    },
+    teacher: {
+      period: 'Aktuelle Position', logoAlt: 'Logo von KNN Idiomas',
+      introduction: 'Als Englischlehrer bei KNN gestalte ich Lernerfahrungen, die die Sprache mit der Kommunikation im Alltag verbinden. Dabei achte ich auf das Lerntempo und die Bedürfnisse jedes Lernenden und erkläre Inhalte verständlich, um die Teilnahme zu fördern.',
+      details: 'Die Vorbereitung und Durchführung des Unterrichts stärken meine Kommunikation und Organisation sowie meine Fähigkeit, den Ansatz an unterschiedliche Menschen anzupassen. Außerdem lerne ich, Lernfortschritte zu begleiten und eine offene, aktive und praxisorientierte Umgebung zu schaffen.',
+      companySiteLabel: 'Unternehmenswebsite',
+    },
   },
 };
 
@@ -274,21 +376,21 @@ function ExperienceDetail({ experience, content, language, isDark, onLanguageCha
             </a>
             <strong>{experience.company}</strong>
             <span>{experience.period}</span>
-            <a className="text-link" href={experience.website} target="_blank" rel="noreferrer">Site da empresa <ArrowUpRight /></a>
+            <a className="text-link" href={experience.website} target="_blank" rel="noreferrer">{experience.companySiteLabel} <ArrowUpRight /></a>
           </aside>
         </section>
 
         {experience.projects.length > 0 && (
           <section className="detail-projects">
             <div className="detail-section-heading">
-              <p className="eyebrow">Projetos</p>
-              <h2>Produtos em que participei.</h2>
+              <p className="eyebrow">{experience.projectsEyebrow}</p>
+              <h2>{experience.projectsHeading}</h2>
             </div>
             <div className="project-grid">
               {experience.projects.map((project, index) => (
                 <article className="project-card" key={project.name}>
-                  <div className={`project-visual project-visual-${index + 1}`} role="img" aria-label={`${project.name}, identidade visual ilustrativa`}>
-                    <span className="project-visual-label">Elevate · Produto digital</span>
+                  <div className={`project-visual project-visual-${index + 1}`} role="img" aria-label={`${project.name}, ${experience.projectVisualAlt}`}>
+                    <span className="project-visual-label">{experience.visualLabel}</span>
                     {project.image ? <img src={project.image} alt="Logo SeatHub" /> : <span className="project-mark">{project.mark}</span>}
                     <strong>{project.name}</strong>
                     <span className="project-visual-caption">{project.category}</span>
@@ -297,7 +399,7 @@ function ExperienceDetail({ experience, content, language, isDark, onLanguageCha
                     <span className="project-number">0{index + 1} / {project.category}</span>
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
-                    {project.name === 'SeatHub' && <a className="text-link" href="https://seathub.net/" target="_blank" rel="noreferrer">Conhecer SeatHub <ArrowUpRight /></a>}
+                    {project.name === 'SeatHub' && <a className="text-link" href="https://seathub.net/" target="_blank" rel="noreferrer">{experience.projectVisitLabel} <ArrowUpRight /></a>}
                   </div>
                 </article>
               ))}
@@ -319,6 +421,13 @@ function App() {
   });
   const content = translations[language];
   const activeExperience = experiencePages[window.location.pathname];
+  const activeExperienceCopy = activeExperience && experiencePageTranslations[language][activeExperience.id];
+  const localizedExperience = activeExperience && {
+    ...activeExperience,
+    ...activeExperienceCopy,
+    title: content.experience.entries[activeExperience.entryIndex].title,
+    projects: activeExperience.projects.map((project, index) => ({ ...project, ...activeExperienceCopy.projects[index] })),
+  };
 
   useEffect(() => {
     document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
@@ -327,13 +436,13 @@ function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = activeExperience ? `${activeExperience.title} | Heitor Gaddo Ataíde` : content.documentTitle;
+    document.title = localizedExperience ? `${localizedExperience.title} | Heitor Gaddo Ataíde` : content.documentTitle;
     document.querySelector('meta[name="description"]')?.setAttribute('content', content.documentDescription);
     localStorage.setItem('language', language);
-  }, [activeExperience, content, language]);
+  }, [content, language, localizedExperience]);
 
-  if (activeExperience) {
-    return <ExperienceDetail experience={activeExperience} content={content} language={language} isDark={isDark} onLanguageChange={setLanguage} onThemeToggle={() => setIsDark((value) => !value)} />;
+  if (localizedExperience) {
+    return <ExperienceDetail experience={localizedExperience} content={content} language={language} isDark={isDark} onLanguageChange={setLanguage} onThemeToggle={() => setIsDark((value) => !value)} />;
   }
 
   return (
